@@ -29,7 +29,7 @@ $proc = new XSLTProcessor;
 $proc->importStyleSheet($xsl);
 $scherm=$proc->transformToXML($xml);
 $scherm = str_replace("startinput_to_replace", $startInput, $scherm);
-$scherm = str_replace("newline", "</td></tr><tr><td>", $scherm);
+$scherm = str_replace("newline", "</tr><tr>", $scherm);
 echo $scherm;
 ?>
 	</body>
